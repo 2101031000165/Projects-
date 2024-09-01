@@ -1,0 +1,137 @@
+
+  
+
+  <div class="row">
+    <div class="col-lg-7">
+        <div class="checkout-container">
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+              <div class="contact-section">
+                <h3>Contact</h3>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" formControlName="email" type="email" placeholder="Email">
+                </div>
+              
+              </div>
+          
+              <div class="delivery-section">
+                <h3>Delivery</h3>
+                <div class="form-group">
+                  <label for="country">Country/Region</label>
+                  <select id="country" formControlName="country">
+                    <option value="India">India</option>
+                    <!-- Add more countries as needed -->
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="firstName">First name</label>
+                      <input id="firstName" formControlName="firstName" placeholder="First name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="lastName">Last name</label>
+                      <input id="lastName" formControlName="lastName" placeholder="Last name">
+                    </div>
+                  </div>
+                </div>
+              
+              
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input id="address" formControlName="address" placeholder="Address">
+                </div>
+                <div class="form-group">
+                  <label for="apartment">Apartment, suite, etc. (optional)</label>
+                  <input id="apartment" formControlName="apartment" placeholder="Apartment, suite, etc.">
+                </div>
+                <div class="form-group city-state-zip">
+                  <div>
+                    <label for="city">City</label>
+                    <input id="city" formControlName="city" placeholder="City">
+                  </div>
+                  <div>
+                    <label for="state">State</label>
+                    <select id="state" formControlName="state">
+                      <option value="Gujarat">Gujarat</option>
+                      <!-- Add more states as needed -->
+                    </select>
+                  </div>
+                  <div>
+                    <label for="pinCode">PIN code</label>
+                    <input id="pinCode" formControlName="pinCode" placeholder="PIN code">
+                  </div>
+                </div>
+             
+              </div>
+          
+              <div class="payment-section">
+                <h3>Payment</h3>
+                <div class="form-group">
+                  <label for="creditCard">
+                    <input type="radio" id="creditCard" formControlName="paymentMethod" value="creditCard">
+                    Credit card
+                  </label>
+                  <label for="cod">
+                    <input type="radio" id="cod" formControlName="paymentMethod" value="cod">
+                    Cash on Delivery (COD)
+                  </label>
+                </div>
+          
+                <div *ngIf="checkoutForm.get('paymentMethod').value === 'creditCard'">
+                  <div class="form-group">
+                    <label for="cardNumber">Card number</label>
+                    <input id="cardNumber" formControlName="cardNumber" type="text" placeholder="Card number">
+                  </div>
+                  <div class="form-group">
+                    <label for="expiryDate">Expiration date (MM / YY)</label>
+                    <input id="expiryDate" formControlName="expiryDate" type="text" placeholder="Expiration date">
+                  </div>
+                  <div class="form-group">
+                    <label for="securityCode">Security code</label>
+                    <input id="securityCode" formControlName="securityCode" type="text" placeholder="Security code">
+                  </div>
+                  <div class="form-group">
+                    <label for="cardName">Name on card</label>
+                    <input id="cardName" formControlName="cardName" type="text" placeholder="Name on card">
+                  </div>
+                </div>
+              </div>
+          
+              <button type="submit" class="btn-primary">Pay now</button>
+            </form>
+          </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="checkout-container" style="width: 500px;">
+            <div *ngFor="let item of cartItems" class="product-info" style="display: flex !important;justify-content: space-around !important;align-items: center;">
+                <div>
+                    <img [src]="baseImageUrl + item.ProductImage" class="product-image" style="height: 100px;width: 100%;">    
+                </div>
+              <div class="product-details">
+                <h2 class="product-title">Product:- {{ item.ProductName }}</h2>
+                <p class="product-price">Price:- {{ item.ProductDescription}}</p>
+              </div>
+            </div>
+            
+            <!-- <div class="discount-code">
+              <input type="text" placeholder="Discount code or gift card" class="discount-input">
+              <button class="apply-btn">Apply</button>
+            </div>
+             -->
+            <div class="price-details" *ngFor="let item of cartItems">
+             
+              <div class="total">
+                <span>Total</span>
+                <span class="total-price">{{ item.CartPrice}}</span>
+              </div>
+            </div>
+          </div>
+    </div>
+  
+  </div>
+ 
+
+  

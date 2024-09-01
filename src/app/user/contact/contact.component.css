@@ -1,0 +1,94 @@
+
+
+/* Form Box Styling */
+.contact-form-box {
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title-2 {
+    font-size: 24px;
+    font-weight: bold;
+ 
+    text-align: left;
+}
+
+/* Input and Textarea Styling */
+.input-item {
+    position: relative;
+
+}
+
+.input-item input,
+.input-item textarea {
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-item textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Icon Styling */
+.input-item-name::before,
+.input-item-email::before,
+.input-item-phone::before,
+.input-item-subject::before,
+.input-item-textarea::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #0073e6;
+    font-size: 20px;
+}
+
+.input-item-name::before {
+    content: "\f007";
+}
+
+.input-item-email::before {
+    content: "\f0e0";
+}
+
+.input-item-phone::before {
+    content: "\f095";
+}
+
+.input-item-subject::before {
+    content: "\f15c";
+}
+
+.input-item-textarea::before {
+    content: "\f044";
+}
+
+/* Button Styling */
+.btn-wrapper {
+    text-align: left;
+}
+
+.theme-btn-1 {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.theme-btn-1:hover {
+    background-color: #005bb5;
+}

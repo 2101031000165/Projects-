@@ -1,0 +1,605 @@
+<!-- <div class="col-lg-3" *ngFor="let product of ProductData">
+  <div style="max-width: 300px; max-height: 300px; margin-bottom: 60px !important;"
+       class="ltn__product-item ltn__product-item-3 text-center product-wrapper">
+    <div class="product-img product-img-square">
+      <a href="#" *ngFor="let image of product.productImage">
+        <img [src]="baseImageUrl + image.productImage" alt="{{image.productImageID}}"
+             loading="lazy" class="image-position-size popup_cart_image">
+      </a>
+    </div>
+    <div class="product-info">
+      <h3 class="product-title popup_cart_title">
+        <a href="#">{{product.ProductName}}</a>
+      </h3>
+      <div class="product-description">
+        <p>{{product.ProductDescription}}</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div id="shopify-section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4" class="shopify-section">
+
+  <div class="featured-collection-slider ltn__product-tab-area ltn__product-gutter "
+    id="section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4" data-section="tabWithProduct">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title-area ">
+            <h2 class="section-title">Best Selling</h2>
+          </div>
+          <div class="ltn__tab-menu ltn__tab-menu-2 ltn__tab-menu-top-right" >
+            <div class="nav" >
+              <a class="active show" *ngFor="let item of ProductData"  data-toggle="tab" [class.active]="selectedTab === item.category.name"
+                (click)="selectTab(item.category.name)">{{item.category.name}}</a>
+            
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane fade show " *ngFor="let product of ProductData;"
+              [ngClass]="{'tab-pane fade show active': selectedTab === product.category.name, 'tab-pane fade': selectedTab !== product.category.name}"
+              id="tab-template--14970614054979__b1beda09-a029-475d-af74-abbf56beb7a4-tab_with_product-1-men">
+              <div class="row ltn__tab-product-slider-one-active slick-arrow-1" data-slick='{"rows": 2,
+         "slidesToShow": 4,
+          "responsive":[
+              {"breakpoint":992, "settings": {"slidesToShow": 3, "arrows": false, "dots": true} },
+              {"breakpoint":768, "settings": {"slidesToShow": 2, "arrows": false, "dots": true} },
+              {"breakpoint":480, "settings": {"slidesToShow": 2, "slidesToScroll": 2, "arrows": false, "dots": true} }
+            ] 
+
+    }'>
+
+                    
+                <div class="col-lg-3">
+                  <div  style="max-width: 300px; max-height: 300px; margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper">
+                    <div class="product-img product-img-square">
+                      <a class="image-position-wrapper primary_img">
+                        <img *ngFor="let image of product.ProductImage" [src]="baseImageUrl + image.imageUrl"
+                          class="image-position-size" sizes="100vw" width="800"
+                          height="800" alt="A. Stylist Sunglass" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title">
+                        <a href="#">{{product.name}}</a>
+                      </h3>
+                      <div class="product-description">
+                        <p>Description:- {{product.description}} | Price :- {{product.price}}</p>  
+                      </div>
+                    </div>
+                    <div class="product-hover-action">
+                      <ul>
+                        <li>
+                          <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                            href="javascript:void(0);" onclick="quiqview('a-n-s-product-title')">
+                         {{product.stockQuantity}}
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0);" (click)="addToCart(product.productId)"
+                            class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                            <span>
+                              <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                              <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="cart-added"><i class="fas fa-check"></i></span>
+                              <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                            </span>
+                          </a></li>
+                        <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist" (click)="wishlistitems(product.productId)"
+                            href="javascript: void(0)" button-wishlist data-product-handle="a-n-s-product-title">
+                            <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                            <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                            <span class="remove-wishlist" title="Remove From wishlist"><i
+                                class="fas fa-heart"></i></span>
+                          </a></li>
+                        <li>
+                          <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                            data-pid="a-n-s-product-title">
+                            <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507487912003">
+                    <div class="product-img product-img-square"><a
+                        href="collections/men/products/a-n-s-product-title.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/sunglass_1_600xe18c.png?v=1692115588 152w,
+                                              assets/cdn/shop/files/sunglass_1_600xe18c.png?v=1692115588 266w,
+                                              assets/cdn/shop/files/sunglass_1_600xe18c.png?v=1692115588 366w,
+                                              assets/cdn/shop/files/sunglass_1_600xe18c.png?v=1692115588 576w,
+                                              assets/cdn/shop/files/sunglass_1_600xe18c.png?v=1692115588 600w,"
+                          src="cdn/shop/files/sunglass_1_600xe18c.png?v=1692115588" sizes="100vw" width="800"
+                          height="800" alt="A. Stylist Sunglass" loading="lazy"
+                          class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/a-n-s-product-title.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/sunglass_2_600x1998.png?v=1692115587 152w,
+                                              assets/cdn/shop/files/sunglass_2_600x1998.png?v=1692115587 266w,
+                                              assets/cdn/shop/files/sunglass_2_600x1998.png?v=1692115587 366w,
+                                              assets/cdn/shop/files/sunglass_2_600x1998.png?v=1692115587 576w,
+                                              assets/cdn/shop/files/sunglass_2_600x1998.png?v=1692115587 600w,"
+                          src="cdn/shop/files/sunglass_2_600x1998.png?v=1692115587" sizes="100vw" width="800"
+                          height="800" alt="A. Stylist Sunglass" loading="lazy"
+                          class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul>
+                          <li class="new-badge">New</li>
+                          <li class="sale-badge">-15%</li>
+                        </ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li>
+                            <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                              href="javascript:void(0);" onclick="quiqview('a-n-s-product-title')"><i
+                                class="far fa-eye"></i>
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0);" onclick="Shopify.addItem(40507487912003, 1); return false;"
+                              class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                              <span>
+                                <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                                <span class="cart-added"><i class="fas fa-check"></i></span>
+                                <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                              </span>
+                            </a></li>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="a-n-s-product-title">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="a-n-s-product-title">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="product-grid-countdown" data-countdown="2024-08-31"></div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a
+                          href="collections/men/products/a-n-s-product-title.html">A. Stylist
+                          Sunglass</a></h3>
+                      <div class="product-price"><del>Rs. 11,100.00</del><span>Rs. 9,400.00</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507488665667">
+                    <div class="product-img product-img-square"><a
+                        href="collections/men/products/b-n-badge-product.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/blueshoe_1_600xafcb.png?v=1692116385 152w,
+                                              assets/cdn/shop/files/blueshoe_1_600xafcb.png?v=1692116385 266w,
+                                              assets/cdn/shop/files/blueshoe_1_600xafcb.png?v=1692116385 366w,
+                                              assets/cdn/shop/files/blueshoe_1_600xafcb.png?v=1692116385 576w,
+                                              assets/cdn/shop/files/blueshoe_1_600xafcb.png?v=1692116385 600w,"
+                          src="cdn/shop/files/blueshoe_1_600xafcb.png?v=1692116385" sizes="100vw" width="800"
+                          height="800" alt="B. Pair of Blue Shoes" loading="lazy"
+                          class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/b-n-badge-product.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/blueshoe_2_600x8189.png?v=1692626014 152w,
+                                              assets/cdn/shop/files/blueshoe_2_600x8189.png?v=1692626014 266w,
+                                              assets/cdn/shop/files/blueshoe_2_600x8189.png?v=1692626014 366w,
+                                              assets/cdn/shop/files/blueshoe_2_600x8189.png?v=1692626014 576w,
+                                              assets/cdn/shop/files/blueshoe_2_600x8189.png?v=1692626014 600w,"
+                          src="cdn/shop/files/blueshoe_2_600x8189.png?v=1692626014" sizes="100vw" width="800"
+                          height="800" alt="B. Pair of Blue Shoes" loading="lazy"
+                          class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul></ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li>
+                            <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                              href="javascript:void(0);" onclick="quiqview('b-n-badge-product')"><i
+                                class="far fa-eye"></i>
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0);" onclick="Shopify.addItem(40507488665667, 1); return false;"
+                              class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                              <span>
+                                <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                                <span class="cart-added"><i class="fas fa-check"></i></span>
+                                <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                              </span>
+                            </a></li>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="b-n-badge-product">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="b-n-badge-product">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a
+                          href="collections/men/products/b-n-badge-product.html">B. Pair of
+                          Blue Shoes</a></h3>
+                      <div class="product-price"><span>Rs. 6,800.00</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507486928963">
+                    <div class="product-img product-img-square"><a
+                        href="collections/men/products/m-n-s-product-title.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/jacket_1_600xc0c6.png?v=1692285993 152w,
+                                              assets/cdn/shop/files/jacket_1_600xc0c6.png?v=1692285993 266w,
+                                              assets/cdn/shop/files/jacket_1_600xc0c6.png?v=1692285993 366w,
+                                              assets/cdn/shop/files/jacket_1_600xc0c6.png?v=1692285993 576w,
+                                              assets/cdn/shop/files/jacket_1_600xc0c6.png?v=1692285993 600w,"
+                          src="cdn/shop/files/jacket_1_600xc0c6.png?v=1692285993" sizes="100vw" width="800" height="800"
+                          alt="M. Denim Clothing Jacket" loading="lazy" class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/m-n-s-product-title.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/jacket_2_600x8c14.png?v=1692285992 152w,
+                                              assets/cdn/shop/files/jacket_2_600x8c14.png?v=1692285992 266w,
+                                              assets/cdn/shop/files/jacket_2_600x8c14.png?v=1692285992 366w,
+                                              assets/cdn/shop/files/jacket_2_600x8c14.png?v=1692285992 576w,
+                                              assets/cdn/shop/files/jacket_2_600x8c14.png?v=1692285992 600w,"
+                          src="cdn/shop/files/jacket_2_600x8c14.png?v=1692285992" sizes="100vw" width="800" height="800"
+                          alt="M. Denim Clothing Jacket" loading="lazy" class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul>
+                          <li class="sale-badge">-15%</li>
+                        </ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li>
+                            <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                              href="javascript:void(0);" onclick="quiqview('m-n-s-product-title')"><i
+                                class="far fa-eye"></i>
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0);" onclick="Shopify.addItem(40507486928963, 1); return false;"
+                              class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                              <span>
+                                <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                                <span class="cart-added"><i class="fas fa-check"></i></span>
+                                <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                              </span>
+                            </a></li>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="m-n-s-product-title">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="m-n-s-product-title">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a
+                          href="collections/men/products/m-n-s-product-title.html">M. Denim
+                          Clothing Jacket</a>
+                      </h3>
+                      <div class="product-price"><del>Rs. 11,100.00</del><span>Rs. 9,400.00</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507492794435">
+                    <div class="product-img product-img-square"><a href="collections/men/products/f-v-w-s-product.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/watch_600x9827.png?v=1692459788 152w,
+                                              assets/cdn/shop/files/watch_600x9827.png?v=1692459788 266w,
+                                              assets/cdn/shop/files/watch_600x9827.png?v=1692459788 366w,
+                                              assets/cdn/shop/files/watch_600x9827.png?v=1692459788 576w,
+                                              assets/cdn/shop/files/watch_600x9827.png?v=1692459788 600w,"
+                          src="cdn/shop/files/watch_600x9827.png?v=1692459788" sizes="100vw" width="800" height="800"
+                          alt="F. Ultimate Smart Watch" loading="lazy" class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/f-v-w-s-product.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/watch_1_600x9827.png?v=1692459788 152w,
+                                              assets/cdn/shop/files/watch_1_600x9827.png?v=1692459788 266w,
+                                              assets/cdn/shop/files/watch_1_600x9827.png?v=1692459788 366w,
+                                              assets/cdn/shop/files/watch_1_600x9827.png?v=1692459788 576w,
+                                              assets/cdn/shop/files/watch_1_600x9827.png?v=1692459788 600w,"
+                          src="cdn/shop/files/watch_1_600x9827.png?v=1692459788" sizes="100vw" width="800" height="800"
+                          alt="F. Ultimate Smart Watch" loading="lazy" class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul>
+                          <li class="sale-badge">-27%</li>
+                        </ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li>
+                            <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                              href="javascript:void(0);" onclick="quiqview('f-v-w-s-product')"><i
+                                class="far fa-eye"></i>
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0);" onclick="Shopify.addItem(40507492794435, 1); return false;"
+                              class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                              <span>
+                                <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                                <span class="cart-added"><i class="fas fa-check"></i></span>
+                                <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                              </span>
+                            </a></li>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="f-v-w-s-product">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="f-v-w-s-product">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a
+                          href="collections/men/products/f-v-w-s-product.html">F. Ultimate
+                          Smart Watch</a></h3>
+                      <div class="product-price"><del>Rs. 6,400.00</del><span>Rs. 4,700.00</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507492728899">
+                    <div class="product-img product-img-square"><a href="collections/men/products/e-s-product.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/ment-shirt_1_600x7992.png?v=1692120651 152w,
+             assets/cdn/shop/files/ment-shirt_1_600x7992.png?v=1692120651 266w,
+             assets/cdn/shop/files/ment-shirt_1_600x7992.png?v=1692120651 366w,
+             assets/cdn/shop/files/ment-shirt_1_600x7992.png?v=1692120651 576w,
+             assets/cdn/shop/files/ment-shirt_1_600x7992.png?v=1692120651 600w,"
+                          src="cdn/shop/files/ment-shirt_1_600x7992.png?v=1692120651" sizes="100vw" width="800"
+                          height="800" alt="E. Casual Comforts T-shirt" loading="lazy"
+                          class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/e-s-product.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/ment-shirt_2_600xd73b.png?v=1692120652 152w,
+               assets/cdn/shop/files/ment-shirt_2_600xd73b.png?v=1692120652 266w,
+               assets/cdn/shop/files/ment-shirt_2_600xd73b.png?v=1692120652 366w,
+               assets/cdn/shop/files/ment-shirt_2_600xd73b.png?v=1692120652 576w,
+               assets/cdn/shop/files/ment-shirt_2_600xd73b.png?v=1692120652 600w,"
+                          src="cdn/shop/files/ment-shirt_2_600xd73b.png?v=1692120652" sizes="100vw" width="800"
+                          height="800" alt="E. Casual Comforts T-shirt" loading="lazy"
+                          class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul></ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li>
+                            <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                              href="javascript:void(0);" onclick="quiqview('e-s-product')"><i class="far fa-eye"></i>
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0);" onclick="Shopify.addItem(40507492728899, 1); return false;"
+                              class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                              <span>
+                                <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                                <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                                <span class="cart-added"><i class="fas fa-check"></i></span>
+                                <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                              </span>
+                            </a></li>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="e-s-product">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="e-s-product">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a href="collections/men/products/e-s-product.html">E.
+                          Casual Comforts
+                          T-shirt</a></h3>
+                      <div class="product-price"><span>Rs. 3,400.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507481620547">
+                    <div class="product-img product-img-square"><a href="collections/men/products/s-a-product.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/jacket_8_600xfefa.png?v=1692357458 152w,
+             assets/cdn/shop/files/jacket_8_600xfefa.png?v=1692357458 266w,
+             assets/cdn/shop/files/jacket_8_600xfefa.png?v=1692357458 366w,
+             assets/cdn/shop/files/jacket_8_600xfefa.png?v=1692357458 576w,
+             assets/cdn/shop/files/jacket_8_600xfefa.png?v=1692357458 600w,"
+                          src="cdn/shop/files/jacket_8_600xfefa.png?v=1692357458" sizes="100vw" width="800" height="800"
+                          alt="S. Mokmol Jacket" loading="lazy" class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/s-a-product.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/jacket_9_600xfefa.png?v=1692357458 152w,
+               assets/cdn/shop/files/jacket_9_600xfefa.png?v=1692357458 266w,
+               assets/cdn/shop/files/jacket_9_600xfefa.png?v=1692357458 366w,
+               assets/cdn/shop/files/jacket_9_600xfefa.png?v=1692357458 576w,
+               assets/cdn/shop/files/jacket_9_600xfefa.png?v=1692357458 600w,"
+                          src="cdn/shop/files/jacket_9_600xfefa.png?v=1692357458" sizes="100vw" width="800" height="800"
+                          alt="S. Mokmol Jacket" loading="lazy" class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul></ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="s-a-product">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="s-a-product">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a href="collections/men/products/s-a-product.html">S.
+                          Mokmol
+                          Jacket</a></h3>
+                      <div class="product-price"><span>Rs. 2,800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div style="max-width: 300px;max-height: 300px;margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper 40507492696131">
+                    <div class="product-img product-img-square"><a href="collections/men/products/d-s-o-product.html"
+                        class="image-position-wrapper primary_img">
+                        <img srcset="assets/cdn/shop/files/hat_1_600x36a6.png?v=1692120024 152w,
+             assets/cdn/shop/files/hat_1_600x36a6.png?v=1692120024 266w,
+             assets/cdn/shop/files/hat_1_600x36a6.png?v=1692120024 366w,
+             assets/cdn/shop/files/hat_1_600x36a6.png?v=1692120024 576w,
+             assets/cdn/shop/files/hat_1_600x36a6.png?v=1692120024 600w,"
+                          src="cdn/shop/files/hat_1_600x36a6.png?v=1692120024" sizes="100vw" width="800" height="800"
+                          alt="D. Fashionable Hat" loading="lazy" class="image-position-size popup_cart_image">
+                      </a><a href="collections/men/products/d-s-o-product.html"
+                        class="image-position-wrapper secondary_img">
+                        <img srcset="assets/cdn/shop/files/hat_2_600x7989.png?v=1692120025 152w,
+               assets/cdn/shop/files/hat_2_600x7989.png?v=1692120025 266w,
+               assets/cdn/shop/files/hat_2_600x7989.png?v=1692120025 366w,
+               assets/cdn/shop/files/hat_2_600x7989.png?v=1692120025 576w,
+               assets/cdn/shop/files/hat_2_600x7989.png?v=1692120025 600w,"
+                          src="cdn/shop/files/hat_2_600x7989.png?v=1692120025" sizes="100vw" width="800" height="800"
+                          alt="D. Fashionable Hat" loading="lazy" class="image-position-size popup_cart_image">
+                      </a>
+                      <div class="product-badge">
+                        <ul>
+                          <li class="soldout-badge">Soldout</li>
+                        </ul>
+                      </div>
+                      <div class="product-hover-action">
+                        <ul>
+                          <li>
+                            <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                              href="javascript:void(0);" onclick="quiqview('d-s-o-product')"><i class="far fa-eye"></i>
+                            </a>
+                          </li>
+                          <li><button class="cart-disable" title="Soldout">
+                              <span class="cart-text"><i class="fas fa-shopping-cart"></i></span>
+                            </button></li>
+                          <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                              href="javascript: void(0)" button-wishlist data-product-handle="d-s-o-product">
+                              <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                              <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="remove-wishlist" title="Remove From wishlist"><i
+                                  class="fas fa-heart"></i></span>
+                            </a></li>
+                          <li>
+                            <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                              data-pid="d-s-o-product">
+                              <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title"><a
+                          href="collections/men/products/d-s-o-product.html">D. Fashionable
+                          Hat</a></h3>
+                      <div class="product-price"><del>Rs. 3,400.00</del><span>Rs. 2,800.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
+              <div class="row">
+                <div class="col-lg-3 text-center mt-20">
+                  <a href="collections/men.html" class="theme-btn-1 btn btn-effect-1">View All</a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

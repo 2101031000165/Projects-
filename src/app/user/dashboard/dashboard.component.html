@@ -1,0 +1,290 @@
+<div class="container-fluid" style="background-color: #a9b7d64a;">
+  <carousel>
+    <slide *ngFor="let img of images; let index = index" [id]="'slide-' + index">
+      <div class="ltn__slide-item-inner">
+        <div class="container-alternative">
+          <div class="row flex-row-reverse">
+            <div class="col-lg-6 col-md-5 col-sm-5 align-self-center">
+              <div class="slide-item-img">
+                <a [href]="img.link" class="image-position-wrapper" style="padding-bottom: 100%;">
+                  <img *ngFor="let item of img?.carouselImage" 
+                  [src]="baseImageUrl + item.carouselImage"
+                       class="image-position-size">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-7 col-sm-7 align-self-center">
+              <div class="slide-item-info">
+                <div style="margin-left: 150px;">
+                  <h1 class="slide-title animated">{{ img.carouselTitle }} </h1>
+                  <div class="slide-brief animated">
+                    <p>{{ img.description }}</p>
+                  </div>
+                  <div class="btn-wrapper animated">
+                    <a [href]="img.link" routerLink="user/products" class="theme-btn-1 btn btn-effect-1" (click)="navigate()">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</div>
+
+  
+
+<div class="ltn__banner-area" data-section="multipleBanner"
+id="section-template--15086778286147__1650114938d1f0331c" style="margin-top: 100px;">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="ltn__banner-item ltn__banner-style-3 " id="block-1650114937c5e17a67-0">
+        <div class="ltn__banner-img"><a  class="image-position-wrapper"
+            style="padding-bottom: 61.40350877192983%;">
+            <img srcset="assets/cdn/shop/files/banner-570x360-2_1200x213c.pngv=1694613943 270w,
+                 assets/cdn/shop/files/banner-570x360-2_1200x213c.png?v=1694613943 370w,
+                 assets/cdn/shop/files/banner-570x360-2_1200x213c.png?v=1694613943 370w,
+                 assets/cdn/shop/files/banner-570x360-2_1200x213c.png?v=1694613943 390w,
+                 assets/cdn/shop/files/banner-570x360-2_1200x213c.png?v=1694613943 470w,
+                 assets/cdn/shop/files/banner-570x360-2_1200x213c.png?v=1694613943 570w,
+                 
+                 
+                 
+                 
+                 
+                 " loading="lazy" src="cdn/shop/files/banner-570x360-2_1200x213c.png?v=1694613943"
+              sizes="100vw" width="570" height="350" alt="" class="image-position-size">
+          </a></div>
+        <div class="ltn__banner-info">
+          <h2 class="white-color"><a routerLink="user/products">Suits & Formalwear</a></h2>
+          <div class="btn-wrapper">
+            <a  routerLink="user/products" class="btn btn-transparent btn-effect-1" (click)="navigate()">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="ltn__banner-item ltn__banner-style-3 " id="block-e6f46f27-57a6-45ae-8202-cec5829d896c">
+        <div class="ltn__banner-img"><a
+            
+            class="image-position-wrapper" style="padding-bottom: 61.40350877192983%;">
+            <img srcset="assets/cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046 270w,
+                 assets/cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046 370w,
+                 assets/cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046 370w,
+                 assets/cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046 390w,
+                 assets/cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046 470w,
+                 assets/cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046 570w,
+                 
+                 
+                 
+                 
+                 
+                 " loading="lazy" src="cdn/shop/files/Untitled_design_8_1200x17b7.png?v=1690732046"
+              sizes="100vw" width="570" height="350" alt="" class="image-position-size">
+          </a></div>
+        <div class="ltn__banner-info">
+          <h2 class="black-color"><a
+            routerLink="user/products">Tops & Gowns</a></h2>
+          <div class="btn-wrapper">
+            <a routerLink="user/products"
+              class="btn btn-transparent btn-effect-1" (click)="navigate()">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+<div id="shopify-section-template--15086778286147__54b03521-a569-42bc-91cf-e3a9ff745d2c" class="shopify-section">
+    <!-- COUNTDOWN AREA START -->
+    <div class="ltn__countdown-area section-bg-1" data-section="countdownBanner"
+        id="section-template--15086778286147__54b03521-a569-42bc-91cf-e3a9ff745d2c">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="ltn__countdown-info text-center pt-100 pb-100">
+                        <div class="section-title-area ltn__section-title-2 mb-0">
+                            <h2 class="section-title">Best Offer - Up to <span>50%</span></h2>
+                        </div>
+                        <p>Explore our latest New Arrivals & unlock discounts of up to 50% off!</p>
+                        <div class="ltn__countdown ltn__countdown-1 mt-0" data-countdown="2024/09/02"></div>
+                        <div class="btn-wrapper animated">
+                            <a routerLink="user/products" class="theme-btn-1 btn btn-effect-1" (click)="navigate()">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="countdown-img d-none d-lg-block "><a routerLink="user/products" (click)="navigate()"
+                            class="image-position-wrapper" style="padding-bottom: 105.26315789473684%;">
+                            <img src="../../../assets/images/home-1.jpg" sizes="100vw"
+                                width="570" height="600" alt="" class="image-position-size">
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- COUNTDOWN AREA END -->
+
+</div>
+<div id="shopify-section-template--15086778286147__1637331459451d8874" class="shopify-section">
+
+
+<!-- 
+    <div class="container">
+        <carousel>
+          <slide *ngFor="let chunk of cardsChunks">
+            <div class="row">
+              <div *ngFor="let card of chunk" class="col-md-3">
+                <div class="card">
+                  <img [src]="card.imageUrl" 
+                  [srcset]="card.srcset"
+                  [sizes]="card.sizes"
+                  [loading]="card.loading"
+                  [width]="card.width"
+                  [height]="card.height"
+                  [alt]="card.title"  class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.description }}</p>
+                    <a [href]="card.link" class="btn btn-primary">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </slide>
+        </carousel>
+      </div> -->
+
+      <!-- <div class="container">
+        <carousel>
+          <slide *ngFor="let card of ProductData">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="ltn__product-item ltn__product-item-3 text-center product-wrapper" 
+                       style="max-width: 300px; max-height: 300px; margin-bottom: 60px !important;">
+                    <div class="product-img product-img-square">
+                      <a class="image-position-wrapper primary_img">
+                        <img *ngFor="let image of card.ProductImage" [src]="baseImageUrl + image.imageUrl"
+                          class="image-position-size" sizes="100vw" width="800" height="800" 
+                          alt="{{card.name}}" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title">
+                        <a href="#">{{card.name}}</a>
+                      </h3>
+                      <div class="product-description">
+                        <p>Description: {{card.description}} | Price: {{card.price}}</p>
+                      </div>
+                    </div>
+                    <div class="product-hover-action">
+                      <ul>
+                        <li>
+                          <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                            href="javascript:void(0);">
+                            {{card.stockQuantity}}
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0);" class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                          <span>
+                            <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                            <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                            <span class="cart-added"><i class="fas fa-check"></i></span>
+                            <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                          </span>
+                        </a></li>
+                        <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist" href="javascript:void(0)">
+                          <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                          <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                          <span class="remove-wishlist" title="Remove From wishlist"><i class="fas fa-heart"></i></span>
+                        </a></li>
+                        <li>
+                          <a title="Add to compare" href="javascript:void(0);" class="compare">
+                            <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </slide>
+        </carousel>
+      </div> -->
+      
+
+      <!-- <div class="container">
+        <carousel>
+          <slide *ngFor="let chunk of ProductData">
+            <div class="row">
+              <div *ngFor="let card of ProductData" class="col-md-3">
+                <div class="card">
+                  <div  style="max-width: 300px; max-height: 300px; margin-bottom: 60px !important;"
+                    class="ltn__product-item ltn__product-item-3 text-center product-wrapper">
+                    <div class="product-img product-img-square">
+                      <a class="image-position-wrapper primary_img">
+                        <img *ngFor="let image of card.ProductImage" [src]="baseImageUrl + image.imageUrl"
+                          class="image-position-size" sizes="100vw" width="800"
+                          height="800" alt="A. Stylist Sunglass" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-title popup_cart_title">
+                        <a href="#">{{card.name}}</a>
+                      </h3>
+                      <div class="product-description">
+                        <p>Description:- {{card.description}} | Price :- {{card.price}}</p>  
+                      </div>
+                    </div>
+                    <div class="product-hover-action">
+                      <ul>
+                        <li>
+                          <a title="Quickview" data-toggle="modal" data-target="#quickViewModal"
+                            href="javascript:void(0);" onclick="quiqview('a-n-s-product-title')">
+                         {{card.stockQuantity}}
+                          </a>
+                        </li>
+                        <li><a href="javascript:void(0);"
+                            class="ajax-spin-cart ajax-spin-cart-drawer" title="Add to cart">
+                            <span>
+                              <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
+                              <span class="cart-loading"><i class="fas fa-spinner fa-pulse"></i></span>
+                              <span class="cart-added"><i class="fas fa-check"></i></span>
+                              <span class="cart-unavailable"><i class="fas fa-exclamation-triangle"></i></span>
+                            </span>
+                          </a></li>
+                        <li><a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist"
+                            href="javascript: void(0)" button-wishlist data-product-handle="a-n-s-product-title">
+                            <span class="add-wishlist" title="Add to wishlist"><i class="far fa-heart"></i></span>
+                            <span class="loading-wishlist"><i class="fas fa-spinner fa-pulse"></i></span>
+                            <span class="remove-wishlist" title="Remove From wishlist"><i
+                                class="fas fa-heart"></i></span>
+                          </a></li>
+                        <li>
+                          <a title="Add to compare" data-toggle="modal" href="javascript:void(0);" class="compare"
+                            data-pid="a-n-s-product-title">
+                            <i class="fas fa-exchange-alt"></i><span> Compare</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </slide>
+        </carousel>
+      </div> -->
+
+
+
+

@@ -1,0 +1,57 @@
+<div class="shopping-cart-container">
+    <h2 class="cart-title">Your Shopping Wishlist</h2>
+    <div class="cart-items-container">
+      <div class="cart-item" *ngFor="let item of allitems">
+        <div class="cart-item-image">
+          <img [src]="baseImageUrl + item.ProductImage" alt="{{item.ProductName}}">
+        </div>
+        <div class="cart-item-details">
+          <h4>{{ item.ProductName }}</h4>
+          <p>{{ item.ProductDescription }}</p>
+        </div>
+        <!-- <div class="cart-item-price">
+          Rs. {{ item.price }}
+        </div>
+        <div class="cart-item-quantity">
+          <button (click)="decreaseQuantity(item)">-</button>
+          <span>{{ item.Quantity }}</span>
+          <button (click)="increaseQuantity(item)">+</button>
+        </div> -->
+        <div class="cart-item-total">
+          Rs. {{ item.CartPrice }}
+        </div>
+        <div class="cart-item-remove">
+          <button (click)="removeFromCart(item.wishlistID)"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- <div class="cart-bottom-section">
+      <div class="special-instructions">
+        <h2>Special instructions for seller</h2>
+      </div>
+      <div class="cart-totals">
+        <h3>Cart Totals</h3>
+        <div class="totals-details">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <span>Rs. </span>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <span>Rs. </span>
+          </div>
+        </div>
+        <div class="cart-actions">
+          <button (click)="checkout()"  class="checkout-button">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+   -->
+  
+    <div class="cart-actions">
+      <button class="continue-shopping" (click)="ContinueCart()">Continue Shopping</button>
+      <button class="clear-cart" (click)="clearCart()">Remove Form Wishlist</button>
+    </div>
+  </div>
+  

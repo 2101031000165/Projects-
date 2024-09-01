@@ -1,0 +1,49 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="first_name">First Name:</label>
+      <input id="first_name" formControlName="first_name" type="text" />
+    </div>
+  
+    <div>
+      <label for="last_name">Last Name:</label>
+      <input id="last_name" formControlName="last_name" type="text" />
+    </div>
+  
+    <div>
+      <label for="building">Building:</label>
+      <input id="building" formControlName="building" type="text" />
+    </div>
+  
+    <div>
+      <label for="street">Street:</label>
+      <input id="street" formControlName="street" type="text" />
+    </div>
+  
+    <div>
+      <label for="city">City:</label>
+      <input id="city" formControlName="city" type="text" />
+    </div>
+  
+    <div>
+      <label for="ZipCode">Zip Code:</label>
+      <input id="ZipCode" formControlName="ZipCode" type="text" />
+    </div>
+  
+    <div>
+      <label for="state">State:</label>
+      <input id="state" formControlName="state" type="text" />
+    </div>
+  
+    <div>
+      <label for="Details_ID">Details ID:</label>
+      <input id="Details_ID" formControlName="Details_ID" type="text" />
+    </div>
+<!--   
+    <div>
+      <label for="created_at">Created At:</label>
+      <input id="created_at" formControlName="created_at" type="date" />
+    </div> -->
+  
+    <button type="submit">Submit</button>
+  </form>
+  

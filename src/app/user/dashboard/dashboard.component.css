@@ -1,0 +1,104 @@
+#section-template--15086778286147__1650114938d1f0331c .ltn__banner-img {
+    border-radius: 15px;
+  }
+
+  #section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4 {
+    padding-top: 0px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4 {
+      padding-top: 0px;
+      padding-bottom: 70px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4 {
+      padding-top: 0px;
+      padding-bottom: 50px;
+    }
+  } 
+
+  #block-1650114937c5e17a67-0 .ltn__secondary-color {
+    color: #111111 !important;
+  }
+
+  #block-1650114937c5e17a67-0 h2.white-color {
+    color: #111111;
+  }
+  #section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4 {
+    padding-top: 0px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4 {
+      padding-top: 0px;
+      padding-bottom: 70px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #section-template--15086778286147__b1beda09-a029-475d-af74-abbf56beb7a4 {
+      padding-top: 0px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .nav-link {
+    cursor: pointer;
+  }
+  
+  .tab-pane {
+    display: none !important;
+  }
+  
+  .tab-pane.show.active {
+    display: block !important;
+  }
+
+  .slide-title {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .slide-brief {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .btn-wrapper {
+    margin-top: 20px;
+  }
+  
+  .theme-btn-1 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .theme-btn-1:hover {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .animated {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
